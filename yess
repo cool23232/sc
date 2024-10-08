@@ -231,6 +231,7 @@ local randomStr = randomString(30)
 
 -- Print the desired output with the random string included
 print("sUNC, VERSION 1.40 " .. randomStr)
+print("Contributers: vvultt, GRH, 0_void")
 
 
 
