@@ -160,12 +160,14 @@ wait(-1)
 print("✅ setthreadidentity")
 wait(-1)
 print("✅ writefile")
+print("\n")
 
 -- Add random time calculation
 local min_time = 3
 local max_time = 6
 local random_time = min_time + math.random() * (max_time - min_time)
 total_time = total_time + random_time
+
 
 print(string.format("😎 Passed the test with 100%% success rate (84 out of 84)"))
 print("❌ Total tests failed: 0")
