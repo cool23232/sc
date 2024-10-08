@@ -8,8 +8,8 @@ print("Loading...")
 print("Grabbing executor name...")
 print("STARTING sUNC test")
 
-wait(7)
-total_time = total_time + 7
+wait(3)
+total_time = total_time + 3
 
 wait(1.5)
 total_time = total_time + 1.5
@@ -33,8 +33,8 @@ print("loadstring[complicated] true")
 print("loadstring[simple] true")
 print("loadstring[basic] true")
 
-wait(5)
-total_time = total_time + 5
+wait(3)
+total_time = total_time + 3
 
 -- Skip invalid waits (like -1)
 wait(-1)
