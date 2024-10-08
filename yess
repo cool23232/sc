@@ -37,6 +37,7 @@ wait(5)
 total_time = total_time + 5
 
 -- Skip invalid waits (like -1)
+wait(-1)
 print("\n\n\n")
 
 print("✅ Drawing.Fonts")
