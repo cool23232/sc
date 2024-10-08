@@ -8,6 +8,8 @@ print("Loading...")
 print("Grabbing executor name...")
 print("STARTING sUNC test")
 
+wait(10)
+
 wait(1.5)
 total_time = total_time + 1
 
