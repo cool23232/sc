@@ -175,10 +175,6 @@ print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
 print(string.format("Finished the test in %.2f seconds", total_time))
 print("\n")
 
--- Print the final time taken
-print(string.format("Finished the test in %.2f seconds", total_time))
-print("\n")
-
 -- Function to generate a random string of a given length
 local function randomString(maxLength)
     local chars = {} 
@@ -237,6 +233,3 @@ print("sUNC, VERSION 1.40 " .. randomStr)
 
 
 -- Print the desired output with the random string includ
-
-
-print("Contributers: vvultt, GRH, 0_void")
