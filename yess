@@ -12,7 +12,7 @@ wait(1.5)
 total_time = total_time + 1
 
 print("❗ Starting basic loadstring testing...")
-print("❗ finished basic loadstring testing")
+print("❗ Finished basic loadstring testing")
 print("❗ Starting simple loadstring URL testing...")
 
 wait(1)
@@ -26,10 +26,18 @@ wait(1.1)
 total_time = total_time + 1
 
 print("❗ Finished complicated loadstring URL testing")
+print("loadstring[complicated] true")
+print("loadstring[simple] true")
+print("loadstring[basic] true")
+
+wait(5)
+
+
 wait(-1)  -- This wait is invalid (negative value), so we skip adding it
 print("\n\n\n")
 
 print("✅ Drawing.Fonts")
+wait(-1)
 print("✅ Drawing.new")
 print("✅ WebSocket.connect")
 print("✅ appendfile")
@@ -37,8 +45,10 @@ print("✅ base64_decode")
 print("✅ base64_encode")
 print("✅ cache.invalidate")
 print("✅ cache.iscached")
+wait(-1)
 print("✅ cache.replace")
 print("✅ checkcaller")
+wait(-1)
 print("✅ cleardrawcache")
 print("✅ clonefunction")
 print("✅ cloneref")
@@ -47,28 +57,41 @@ print("✅ crypt.decrypt")
 print("✅ crypt.encrypt")
 print("✅ crypt.generatebytes")
 print("✅ crypt.generatekey")
+wait(-1)
 print("✅ crypt.hash")
+wait(-1)
 print("✅ debug.getproto")
+wait(-1)
 print("✅ debug.getconstant")
+wait(-1)
 print("✅ debug.getconstants")
 print("✅ debug.getinfo")
 print("✅ debug.getproto")
+wait(-1)
 print("✅ debug.getprotos")
 print("✅ debug.getstack")
 print("✅ debug.getupvalue")
+wait(-1)
 print("✅ debug.getupvalues")
+wait(-1)
 print("✅ debug.setconstant")
+wait(-1)
 print("✅ debug.setstack")
 print("✅ debug.setupvalue")
+wait(-1)
 print("✅ defile")
 print("✅ delfolder")
 print("✅ fireclickdetector")
+wait(-1)
 print("✅ fireproximityprompt")
 print("✅ getcallbackvalue")
+wait(-1)
 print("✅ getconnections")
 print("✅ getcustomasset")
+wait(-1)
 print("✅ getgc")
 print("✅ getgenv_access")
+wait(-1)
 print("✅ gethiddenproperty")
 print("✅ gethui")
 print("✅ getinstances")
@@ -77,18 +100,27 @@ print("✅ getnamecallmethod")
 print("✅ getnilinstances")
 print("✅ getrawmetatable")
 print("✅ getrenderproperty")
+wait(-1)
 print("✅ getrenv")
+wait(-1)
 print("✅ getrunningscripts")
+wait(-1)
 print("✅ getscriptbytecode")
+wait(-1)
 print("✅ getscriptclosure")
+
 print("✅ getscripthash")
 print("✅ getscripts")
 print("✅ getsenv")
 print("✅ getthreadidentity")
 print("✅ hookfunction")
+wait(-1)
 print("✅ hookmetamethod")
+wait(-1)
 print("✅ identifyexecutor")
+wait(-1)
 print("✅ iscclosure")
+wait(-1)
 print("✅ isexecutorclosure")
 print("✅ isfile")
 print("✅ isfolder")
@@ -96,23 +128,35 @@ print("✅ islclosure")
 print("✅ isrbxactive")
 print("✅ isreadonly")
 print("✅ isrenderobj")
+wait(-1)
 print("✅ isscriptable")
 print("✅ listfiles")
 print("✅ loadfile")
 print("✅ loadstring")
 print("✅ lz4compress")
+wait(-1)
 print("✅ lz4decompress")
+wait(-1)
 print("✅ makefolder")
+wait(-1)
 print("✅ newcclosure")
+wait(-1)
 print("✅ readfile")
 print("✅ request")
+wait(-1)
 print("✅ sethiddenproperty")
 print("✅ setrawmetatable")
+wait(-1)
 print("✅ setreadonly")
+wait(-1)
 print("✅ setrenderproperty")
+wait(-1)
 print("✅ setscriptable")
+wait(-1)
 print("✅ setthreadidentity")
+wait(-1)
 print("✅ writefile")
+
 print("\n")
 
 
@@ -131,5 +175,64 @@ print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
 print(string.format("Finished the test in %.2f seconds", total_time))
 print("\n")
 
-print("sUNC, VERSION 1.40")
+-- Function to generate a random string of a given length
+local function randomString(maxLength)
+    local chars = {} 
+    -- Allow characters A-Z, a-z
+    for i = 65, 90 do table.insert(chars, string.char(i)) end -- A-Z
+    for i = 97, 122 do table.insert(chars, string.char(i)) end -- a-z
+
+    local useStructuredStyle = math.random(2) == 1
+    local length
+
+    if useStructuredStyle then
+        -- Structured style: random length from 12 to maxLength
+        length = math.random(12, maxLength)
+    else
+        -- Simple style: fixed length of 10 (similar to "hJdkOpsFfW")
+        length = 10
+    end
+
+    local str = {}
+    for i = 1, length do
+        local randChar = chars[math.random(#chars)] -- Random character from allowed set
+        table.insert(str, randChar)
+    end
+
+    -- If the string length is 25 or more, make sure it contains both "." and "("
+    if length >= 25 then
+        local hasDot, hasParenthesis = false, false
+
+        -- Check if the string already contains "." or "("
+        for i = 1, #str do
+            if str[i] == "." then
+                hasDot = true
+            elseif str[i] == "(" then
+                hasParenthesis = true
+            end
+        end
+
+        -- Ensure the string has at least one "." and one "("
+        if not hasDot then
+            str[math.random(#str)] = "." -- Replace a random character with "."
+        end
+        if not hasParenthesis then
+            str[math.random(#str)] = "(" -- Replace a random character with "("
+        end
+    end
+
+    return table.concat(str)
+end
+
+-- Generate random string after "VERSION 1.40"
+local randomStr = randomString(30)
+
+-- Print the desired output with the random string included
+print("sUNC, VERSION 1.40 " .. randomStr)
+
+
+
+-- Print the desired output with the random string includ
+
+
 print("Contributers: vvultt, GRH, 0_void")
