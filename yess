@@ -174,3 +174,69 @@ print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
 -- Print the final time taken with greater precision
 print(string.format("Finished the test in %.2f seconds", total_time))
 print("\n")
+
+-- Print the final time taken
+print(string.format("Finished the test in %.2f seconds", total_time))
+print("\n")
+
+-- Function to generate a random string of a given length
+local function randomString(maxLength)
+    local chars = {} 
+    -- Allow characters A-Z, a-z
+    for i = 65, 90 do table.insert(chars, string.char(i)) end -- A-Z
+    for i = 97, 122 do table.insert(chars, string.char(i)) end -- a-z
+
+    local useStructuredStyle = math.random(2) == 1
+    local length
+
+    if useStructuredStyle then
+        -- Structured style: random length from 12 to maxLength
+        length = math.random(12, maxLength)
+    else
+        -- Simple style: fixed length of 10 (similar to "hJdkOpsFfW")
+        length = 10
+    end
+
+    local str = {}
+    for i = 1, length do
+        local randChar = chars[math.random(#chars)] -- Random character from allowed set
+        table.insert(str, randChar)
+    end
+
+    -- If the string length is 25 or more, make sure it contains both "." and "("
+    if length >= 25 then
+        local hasDot, hasParenthesis = false, false
+
+        -- Check if the string already contains "." or "("
+        for i = 1, #str do
+            if str[i] == "." then
+                hasDot = true
+            elseif str[i] == "(" then
+                hasParenthesis = true
+            end
+        end
+
+        -- Ensure the string has at least one "." and one "("
+        if not hasDot then
+            str[math.random(#str)] = "." -- Replace a random character with "."
+        end
+        if not hasParenthesis then
+            str[math.random(#str)] = "(" -- Replace a random character with "("
+        end
+    end
+
+    return table.concat(str)
+end
+
+-- Generate random string after "VERSION 1.40"
+local randomStr = randomString(30)
+
+-- Print the desired output with the random string included
+print("sUNC, VERSION 1.40 " .. randomStr)
+
+
+
+-- Print the desired output with the random string includ
+
+
+print("Contributers: vvultt, GRH, 0_void")
