@@ -1,0 +1,22 @@
+wait(1)
+
+print("Loading...")
+print("Grabbing executor name...")
+print("STARTING sUNC test")
+
+wait(1)
+
+print("❗ Starting basic loadstring testing...")
+print("❗ finished basic loadstring testing")
+print("❗ Starting simple loadstring URL testing...")
+
+wait(-1)
+
+print("✅ Passed the simple loadstring test. Short obfuscated scripts can be executed.")
+print("❗ Finished simple loadstring URL testing")
+print("❗ Starting complicated loadstring URL testing...")
+
+wait(1)
+
+print("❗ Finished complicated loadstring URL testing")
+print("\n")
