@@ -123,7 +123,17 @@ print("✅ setthreadidentity")
 print("✅ writefile")
 print("\n")
 
--- Function to generate a random string of a given length
+
+
+-- Print the final time taken without trailing zeros
+print(string.format("😎 Passed the test with 100% success rate (84 out of 84)"))
+print("❌ Total tests failed: 0")
+print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
+
+-- Print the final time taken
+print(string.format("Finished the test in %.1f seconds", total_time))  -- Use %.1f for one decimal place
+print("\n")
+
 local function randomString(maxLength)
     local chars = {}
     -- Allow characters A-Z, a-z (excluding capital 'I')
@@ -179,79 +189,9 @@ end
 -- Generate random string after "VERSION 1.40"
 local randomStr = randomString(30)
 
--- Print the desired output with the random string included
-print("sUNC, VERSION 1.40 " .. randomStr)
-print("Contributors: vvultt, GRH, 0_void")
-
--- Print the final time taken without trailing zeros
-print(string.format("😎 Passed the test with 100% success rate (84 out of 84)"))
-print("❌ Total tests failed: 0")
-print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
-
--- Print the final time taken
-print(string.format("Finished the test in %.1f seconds", total_time))  -- Use %.1f for one decimal place
-print("\n")
-
-
 
 -- Function to generate a random string of a given length
 
-local function randomString(maxLength)
-    local chars = {} 
-    -- Allow characters A-Z, a-z (excluding capital 'I')
-    for i = 65, 90 do 
-        if i ~= 73 then -- Skip capital 'I'
-            table.insert(chars, string.char(i)) 
-        end
-    end
-    for i = 97, 122 do table.insert(chars, string.char(i)) end -- a-z (including lowercase 'i')
-
-    local useStructuredStyle = math.random(2) == 1
-    local length
-
-    if useStructuredStyle then
-        -- Structured style: random length from 12 to maxLength
-        length = math.random(12, maxLength)
-    else
-        -- Simple style: fixed length of 10 (similar to "hJdkOpsFfW")
-        length = 10
-    end
-
-    local str = {}
-    for i = 1, length do
-        local randChar = chars[math.random(#chars)] -- Random character from allowed set
-        table.insert(str, randChar)
-    end
-
-    -- If the string length is 25 or more, make sure it contains both "." and "("
-    if length >= 25 then
-        local hasDot, hasParenthesis = false, false
-
-        -- Check if the string already contains "." or "("
-        for i = 1, #str do
-            if str[i] == "." then
-                hasDot = true
-            elseif str[i] == "(" then
-                hasParenthesis = true
-            end
-        end
-
-        -- Ensure the string has at least one "." and one "("
-        if not hasDot then
-            str[math.random(#str)] = "." -- Replace a random character with "."
-        end
-        if not hasParenthesis then
-            str[math.random(#str)] = "(" -- Replace a random character with "("
-        end
-    end
-
-    return table.concat(str)
-end
-
-
-
--- Generate random string after "VERSION 1.40"
-local randomStr = randomString(30)
 
 -- Print the desired output with the random string included
 print("sUNC, VERSION 1.40 " .. randomStr)
