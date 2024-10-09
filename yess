@@ -1,11 +1,6 @@
 local total_time = 0  -- Initialize total_time here
 
--- Simulate the wait function if it's not defined in the environment
-local function wait(seconds)
-    if seconds > 0 then
-        os.execute("sleep " .. tonumber(seconds))  -- Replace this with sleep logic if needed
-    end
-end
+
 
 -- Simulate wait times and update total_time accordingly
 wait(-1)
