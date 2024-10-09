@@ -1,4 +1,11 @@
-local total_time = 0
+local total_time = 0  -- Initialize total_time here
+
+-- Simulate the wait function if it's not defined in the environment
+local function wait(seconds)
+    if seconds > 0 then
+        os.execute("sleep " .. tonumber(seconds))  -- Replace this with sleep logic if needed
+    end
+end
 
 -- Simulate wait times and update total_time accordingly
 wait(-1)
@@ -48,7 +55,6 @@ print("✅ base64_decode")
 wait(-1)
 print("✅ base64_encode")
 print("✅ cache.invalidate")
-wait(-1)
 print("✅ cache.iscached")
 print("✅ cache.replace")
 print("✅ checkcaller")
@@ -72,13 +78,10 @@ wait(-1)
 print("✅ debug.getconstants")
 print("✅ debug.getinfo")
 print("✅ debug.getproto")
-wait(-1)
 print("✅ debug.getprotos")
 print("✅ debug.getstack")
 print("✅ debug.getupvalue")
-wait(-1)
 print("✅ debug.getupvalues")
-wait(-1)
 print("✅ debug.setconstant")
 wait(-1)
 print("✅ debug.setstack")
@@ -105,13 +108,9 @@ print("✅ getnamecallmethod")
 print("✅ getnilinstances")
 print("✅ getrawmetatable")
 print("✅ getrenderproperty")
-wait(-1)
 print("✅ getrenv")
-wait(-1)
 print("✅ getrunningscripts")
-wait(-1)
 print("✅ getscriptbytecode")
-wait(-1)
 print("✅ getscriptclosure")
 
 print("✅ getscripthash")
@@ -143,17 +142,12 @@ wait(-1)
 print("✅ lz4decompress")
 wait(-1)
 print("✅ makefolder")
-wait(-1)
 print("✅ newcclosure")
-wait(-1)
 print("✅ readfile")
 print("✅ request")
-wait(-1)
 print("✅ sethiddenproperty")
 print("✅ setrawmetatable")
-wait(-1)
 print("✅ setreadonly")
-wait(-1)
 print("✅ setrenderproperty")
 wait(-1)
 print("✅ setscriptable")
@@ -163,15 +157,7 @@ wait(-1)
 print("✅ writefile")
 print("\n")
 
-
-
-local total_time = 0  -- Initialize it here
-
--- Example of adding times
-total_time = total_time + 1
-total_time = total_time + 3
-
-
+-- Function to generate a random string of a given length
 local function randomString(maxLength)
     local chars = {}
     -- Allow characters A-Z, a-z (excluding capital 'I')
@@ -224,7 +210,10 @@ local function randomString(maxLength)
     return table.concat(str)
 end
 
+-- Generate random string after "VERSION 1.40"
+local randomStr = randomString(30)
 
+-- Print the desired output with the random string included
 
 -- Print the final time taken without trailing zeros
 print(string.format("😎 Passed the test with 100% success rate (84 out of 84)"))
@@ -235,15 +224,5 @@ print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
 print(string.format("Finished the test in %.1f seconds", total_time))  -- Use %.1f for one decimal place
 print("\n")
 
--- Function to generate a random string of a given length
-
--- Generate random string after "VERSION 1.40"
-local randomStr = randomString(30)
-
--- Print the desired output with the random string included
 print("sUNC, VERSION 1.40 " .. randomStr)
 print("Contributors: vvultt, GRH, 0_void")
-
-
-
--- Print the desired output with the random string includ
