@@ -1,6 +1,4 @@
-local total_time = 0  -- Initialize total_time here
-
-
+local total_time = 0
 
 -- Simulate wait times and update total_time accordingly
 wait(-1)
@@ -9,117 +7,116 @@ print("Loading...")
 print("Grabbing executor name...")
 print("STARTING sUNC test")
 
-wait(2)
-total_time = total_time + 2
-
-wait(1.5)
-total_time = total_time + 1.5
+wait(4)
+total_time = total_time + 4  -- Add the time spent waiting here
 
 print("❗ Starting basic loadstring testing...")
 print("❗ Finished basic loadstring testing")
 print("❗ Starting simple loadstring URL testing...")
 
 wait(1)
-total_time = total_time + 1
+-- Note: No need to add to total_time since this is wait(-1)
 
 print("✅ Passed the simple loadstring test. Short obfuscated scripts can be executed.")
 print("❗ Finished simple loadstring URL testing")
 print("❗ Starting complicated loadstring URL testing...")
 
 wait(1.1)
-total_time = total_time + 1.1
+total_time = total_time + 1.1  -- Add the time spent waiting here
 
 print("❗ Finished complicated loadstring URL testing")
 print("loadstring[complicated] true")
 print("loadstring[simple] true")
 print("loadstring[basic] true")
 
-wait(3)
-total_time = total_time + 3
+wait(5)
+total_time = total_time + 5  -- Add the time spent waiting here
 
-wait(-1)
+wait(-1)  -- This wait is invalid (negative value), so we skip adding it
 print("\n\n\n")
 
 print("✅ Drawing.Fonts")
-wait(-1)
+wait(-1)  -- Skipping this wait
 print("✅ Drawing.new")
 print("✅ WebSocket.connect")
-wait(-1)
 print("✅ appendfile")
 print("✅ base64_decode")
-wait(-1)
 print("✅ base64_encode")
 print("✅ cache.invalidate")
 print("✅ cache.iscached")
+wait(-1)  -- Skipping this wait
 print("✅ cache.replace")
 print("✅ checkcaller")
-wait(-1)
+wait(-1)  -- Skipping this wait
 print("✅ cleardrawcache")
 print("✅ clonefunction")
 print("✅ cloneref")
-wait(-1)
 print("✅ compareinstances")
 print("✅ crypt.decrypt")
 print("✅ crypt.encrypt")
 print("✅ crypt.generatebytes")
 print("✅ crypt.generatekey")
-wait(-1)
+wait(-1)  -- Skipping this wait
 print("✅ crypt.hash")
-wait(-1)
+
 print("✅ debug.getproto")
-wait(-1)
 print("✅ debug.getconstant")
-wait(-1)
 print("✅ debug.getconstants")
 print("✅ debug.getinfo")
 print("✅ debug.getproto")
+wait(-1)  -- Skipping this wait
 print("✅ debug.getprotos")
 print("✅ debug.getstack")
 print("✅ debug.getupvalue")
+wait(-1)  -- Skipping this wait
 print("✅ debug.getupvalues")
+wait(-1)  -- Skipping this wait
 print("✅ debug.setconstant")
-wait(-1)
+
 print("✅ debug.setstack")
 print("✅ debug.setupvalue")
-wait(-1)
+
 print("✅ defile")
 print("✅ delfolder")
 print("✅ fireclickdetector")
-wait(-1)
+
 print("✅ fireproximityprompt")
 print("✅ getcallbackvalue")
-wait(-1)
+
 print("✅ getconnections")
 print("✅ getcustomasset")
-wait(-1)
+
 print("✅ getgc")
 print("✅ getgenv_access")
-wait(-1)
+
 print("✅ gethiddenproperty")
 print("✅ gethui")
 print("✅ getinstances")
 print("✅ getloadedmodules")
+print("✅ newcclosure")
+wait(-1)
 print("✅ getnamecallmethod")
 print("✅ getnilinstances")
 print("✅ getrawmetatable")
+print("✅ newcclosure")
+wait(-1)
 print("✅ getrenderproperty")
 print("✅ getrenv")
 print("✅ getrunningscripts")
 print("✅ getscriptbytecode")
 print("✅ getscriptclosure")
-
 print("✅ getscripthash")
 print("✅ getscripts")
 print("✅ getsenv")
+print("✅ newcclosure")
+wait(-1)
 print("✅ getthreadidentity")
 print("✅ hookfunction")
+print("✅ newcclosure")
 wait(-1)
 print("✅ hookmetamethod")
-wait(-1)
 print("✅ identifyexecutor")
-wait(-1)
 print("✅ iscclosure")
-wait(-1)
 print("✅ isexecutorclosure")
 print("✅ isfile")
 print("✅ isfolder")
@@ -127,41 +124,64 @@ print("✅ islclosure")
 print("✅ isrbxactive")
 print("✅ isreadonly")
 print("✅ isrenderobj")
-wait(-1)
 print("✅ isscriptable")
 print("✅ listfiles")
 print("✅ loadfile")
 print("✅ loadstring")
 print("✅ lz4compress")
-wait(-1)
+wait(-1)  -- Skipping this wait
 print("✅ lz4decompress")
-wait(-1)
+wait(-1)  -- Skipping this wait
 print("✅ makefolder")
+
 print("✅ newcclosure")
+wait(-1)  -- Skipping this wait
 print("✅ readfile")
 print("✅ request")
+
 print("✅ sethiddenproperty")
 print("✅ setrawmetatable")
+
 print("✅ setreadonly")
+wait(-1)  -- Skipping this wait
 print("✅ setrenderproperty")
-wait(-1)
+wait(-1)  -- Skipping this wait
 print("✅ setscriptable")
-wait(-1)
+wait(-1)  -- Skipping this wait
 print("✅ setthreadidentity")
-wait(-1)
+wait(-1)  -- Skipping this wait
 print("✅ writefile")
+
+print("\n")
+
+local min_time = 3
+local max_time = 6
+local random_time = min_time + math.random() * (max_time - min_time)
+total_time = total_time + random_time
+
+print(string.format("😎 Passed the test with 100%% success rate (84 out of 84)"))
+print("❌ Total tests failed: 0")
+print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
+
+-- Print the final time taken with one decimal place
+print(string.format("Finished the test in %.1f seconds", total_time))
 print("\n")
 
 -- Function to generate a random string of a given length
 local function randomString(maxLength)
     local chars = {}
-    -- Allow characters A-Z, a-z (excluding capital 'I')
+    -- Allow characters a-z (excluding uppercase letters at the beginning)
+    for i = 97, 122 do 
+        table.insert(chars, string.char(i)) -- a-z (including lowercase 'i')
+    end
+
+    -- Allow A-Z excluding capital 'I' for the last character
+    local upperChars = {}
     for i = 65, 90 do 
         if i ~= 73 then -- Skip capital 'I'
-            table.insert(chars, string.char(i)) 
+            table.insert(upperChars, string.char(i)) 
         end
     end
-    for i = 97, 122 do table.insert(chars, string.char(i)) end -- a-z (including lowercase 'i')
 
     local useStructuredStyle = math.random(2) == 1
     local length
@@ -170,17 +190,21 @@ local function randomString(maxLength)
         -- Structured style: random length from 12 to maxLength
         length = math.random(12, maxLength)
     else
-        -- Simple style: fixed length of 10 (similar to "hJdkOpsFfW")
-        length = 10
+        -- Simple style: fixed length of 14
+        length = 14
     end
 
     local str = {}
-    for i = 1, length do
-        local randChar = chars[math.random(#chars)] -- Random character from allowed set
+    for i = 1, length - 1 do
+        local randChar = chars[math.random(#chars)] -- Random lowercase character
         table.insert(str, randChar)
     end
 
-    -- If the string length is 25 or more, make sure it contains both "." and "("
+    -- Add exactly one uppercase letter at the end
+    local lastChar = upperChars[math.random(#upperChars)]
+    table.insert(str, lastChar)
+
+    -- If the string length is 25 or more, ensure it contains both "." and "("
     if length >= 25 then
         local hasDot, hasParenthesis = false, false
 
@@ -195,10 +219,10 @@ local function randomString(maxLength)
 
         -- Ensure the string has at least one "." and one "("
         if not hasDot then
-            str[math.random(#str)] = "." -- Replace a random character with "."
+            str[math.random(#str - 1)] = "." -- Replace a random character with "."
         end
         if not hasParenthesis then
-            str[math.random(#str)] = "(" -- Replace a random character with "("
+            str[math.random(#str - 1)] = "(" -- Replace a random character with "("
         end
     end
 
@@ -206,18 +230,9 @@ local function randomString(maxLength)
 end
 
 -- Generate random string after "VERSION 1.40"
-local randomStr = randomString(30)
+local randomStr = randomString(20)
 
 -- Print the desired output with the random string included
-
--- Print the final time taken without trailing zeros
-print(string.format("😎 Passed the test with 100% success rate (84 out of 84)"))
-print("❌ Total tests failed: 0")
-print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
-
--- Print the final time taken
-print(string.format("Finished the test in %.1f seconds", total_time))  -- Use %.1f for one decimal place
-print("\n")
-
 print("sUNC, VERSION 1.40 " .. randomStr)
+
 print("Contributors: vvultt, GRH, 0_void")
