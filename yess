@@ -165,6 +165,12 @@ print("\n")
 
 
 
+local total_time = 0  -- Initialize it here
+
+-- Example of adding times
+total_time = total_time + 1
+total_time = total_time + 3
+
 
 local function randomString(maxLength)
     local chars = {}
