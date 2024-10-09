@@ -165,14 +165,6 @@ print("\n")
 
 
 
--- Print the final time taken without trailing zeros
-print(string.format("😎 Passed the test with 100% success rate (84 out of 84)"))
-print("❌ Total tests failed: 0")
-print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
-
--- Print the final time taken
-print(string.format("Finished the test in %.1f seconds", total_time))  -- Use %.1f for one decimal place
-print("\n")
 
 local function randomString(maxLength)
     local chars = {}
@@ -229,6 +221,18 @@ end
 -- Generate random string after "VERSION 1.40"
 local randomStr = randomString(30)
 
+-- Print the desired output with the random string included
+print("sUNC, VERSION 1.40 " .. randomStr)
+print("Contributors: vvultt, GRH, 0_void")
+
+-- Print the final time taken without trailing zeros
+print(string.format("😎 Passed the test with 100% success rate (84 out of 84)"))
+print("❌ Total tests failed: 0")
+print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
+
+-- Print the final time taken
+print(string.format("Finished the test in %.1f seconds", total_time))  -- Use %.1f for one decimal place
+print("\n")
 
 -- Function to generate a random string of a given length
 
