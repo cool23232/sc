@@ -167,7 +167,7 @@ local random_time = min_time + math.random() * (max_time - min_time)
 total_time = total_time + random_time
 
 print(string.format("😎 Passed the test with 98%% success rate (82 out of 84)"))
-print("❌ Total tests failed: 0")
+print("❌ Total tests failed: 2")
 print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
 
 -- Print the final time taken with one decimal place
