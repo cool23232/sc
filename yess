@@ -182,11 +182,11 @@ local function randomStringFromList()
         "EcvPgOckRtkxkoA",
         "Rctc|kvkk",
         "oqxgkvwrfqyp",
-        "Jgnnq000FGZVGt"oqticp00",
+        "Jgnnq000FGZVGt\"oqticp00", -- Escaped quote inside the string
         "ctg{qwvjgqpg{oaqvqnfogpqvqvcnmvqA",
         "gurtguqtA",
         "TgikpcDcnwnwk",
-        "Jgnnq."ctivjwtj"OKVEJGNN",
+        "Jgnnq.\"ctivjwtj\"OKVEJGNN", -- Escaped quotes inside the string
         "RtkkowwwwnVGKWDGUEUrtkownvcwuctwv",
         "cpftAggc0.A3",
         "kiwguuuqqqq",
@@ -208,6 +208,4 @@ local randomStr = randomStringFromList()
 
 -- Print the desired output with the random string included
 print("sUNC, VERSION 1.40 " .. randomStr)
-
-
 print("Contributors: vvultt, GRH, 0_void")
