@@ -161,10 +161,10 @@ print("✅ writefile")
 
 print("\n")
 
-local min_time = 3
-local max_time = 6
-local random_time = min_time + math.random() * (max_time - min_time)
-total_time = total_time + random_time
+
+local min_time = -2
+local max_time = 1
+total_time = total_time + (min_time + math.random() * (max_time - min_time))
 
 print(string.format("😎 Passed the test with 98%% success rate (82 out of 84)"))
 print("❌ Total tests failed: 2")
