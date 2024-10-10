@@ -175,71 +175,39 @@ print(string.format("Finished the test in %.1f seconds", total_time))
 print("\n")
 
 -- Function to generate a random string of a given length
-local function randomString(maxLength)
-    local chars = {}
-    -- Allow characters a-z (excluding uppercase letters at the beginning)
-    for i = 97, 122 do 
-        table.insert(chars, string.char(i)) -- a-z (including lowercase 'i')
-    end
+local function randomStringFromList()
+    local stringList = {
+        "Wpfgxtgk",
+        "nghvtkijvqjjJ",
+        "EcvPgOckRtkxkoA",
+        "Rctc|kvkk",
+        "oqxgkvwrfqyp",
+        "Jgnnq000FGZVGt"oqticp00",
+        "ctg{qwvjgqpg{oaqvqnfogpqvqvcnmvqA",
+        "gurtguqtA",
+        "TgikpcDcnwnwk",
+        "Jgnnq."ctivjwtj"OKVEJGNN",
+        "RtkkowwwwnVGKWDGUEUrtkownvcwuctwv",
+        "cpftAggc0.A3",
+        "kiwguuuqqqq",
+        "yjfkf{qwfqvjkuvqvJGOA#",
+        "xtuhevp",
+        "yjqcokuArqugfvqrngcugA",
+        "TgikpcDcnwnwk",
+        "kpukfgAqho{ftAgcouu",
+        "kupvvjcvuyggvA",
+        "uq{qwecpunggr.dcd{kmpay"
+    }
 
-    -- Allow A-Z excluding capital 'I' for the last character
-    local upperChars = {}
-    for i = 65, 90 do 
-        if i ~= 73 then -- Skip capital 'I'
-            table.insert(upperChars, string.char(i)) 
-        end
-    end
-
-    local useStructuredStyle = math.random(2) == 1
-    local length
-
-    if useStructuredStyle then
-        -- Structured style: random length from 12 to maxLength
-        length = math.random(12, maxLength)
-    else
-        -- Simple style: fixed length of 14
-        length = 14
-    end
-
-    local str = {}
-    for i = 1, length - 1 do
-        local randChar = chars[math.random(#chars)] -- Random lowercase character
-        table.insert(str, randChar)
-    end
-
-    -- Add exactly one uppercase letter at the end
-    local lastChar = upperChars[math.random(#upperChars)]
-    table.insert(str, lastChar)
-
-    -- If the string length is 25 or more, ensure it contains both "." and "("
-    if length >= 25 then
-        local hasDot, hasParenthesis = false, false
-
-        -- Check if the string already contains "." or "("
-        for i = 1, #str do
-            if str[i] == "." then
-                hasDot = true
-            elseif str[i] == "(" then
-                hasParenthesis = true
-            end
-        end
-
-        -- Ensure the string has at least one "." and one "("
-        if not hasDot then
-            str[math.random(#str - 1)] = "." -- Replace a random character with "."
-        end
-        if not hasParenthesis then
-            str[math.random(#str - 1)] = "(" -- Replace a random character with "("
-        end
-    end
-
-    return table.concat(str)
+    -- Select a random string from the list
+    return stringList[math.random(#stringList)]
 end
 
--- Generate random string after "VERSION 1.40"
-local randomStr = randomString(20)
+-- Generate a random string from the list
+local randomStr = randomStringFromList()
 
 -- Print the desired output with the random string included
 print("sUNC, VERSION 1.40 " .. randomStr)
+
 
 print("Contributors: vvultt, GRH, 0_void")
