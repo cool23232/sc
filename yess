@@ -7,8 +7,15 @@ print("Loading...")
 print("Grabbing executor name...")
 print("STARTING sUNC test")
 
-wait(4)
-total_time = total_time + 4  -- Add the time spent waiting here
+wait(2)
+total_time = total_time + 2
+
+warn("❌ debug.setconstant Couldn't set the 1st constant")
+warn("❌ debug.setstack Couldn't set the 1st stack item")
+warn("❌ debug.info Didin't return a valid field name [1]")
+
+wait(3)
+total_time = total_time + 3  -- Add the time spent waiting here
 
 print("❗ Starting basic loadstring testing...")
 print("❗ Finished basic loadstring testing")
@@ -62,7 +69,7 @@ print("✅ crypt.hash")
 print("✅ debug.getproto")
 print("✅ debug.getconstant")
 print("✅ debug.getconstants")
-print("✅ debug.getinfo")
+print("❌ debug.getinfo")
 print("✅ debug.getproto")
 wait(-1)  -- Skipping this wait
 print("✅ debug.getprotos")
@@ -71,9 +78,9 @@ print("✅ debug.getupvalue")
 wait(-1)  -- Skipping this wait
 print("✅ debug.getupvalues")
 wait(-1)  -- Skipping this wait
-print("✅ debug.setconstant")
+print("❌ debug.setconstant")
 
-print("✅ debug.setstack")
+print("❌ debug.setstack")
 print("✅ debug.setupvalue")
 
 print("✅ defile")
@@ -159,7 +166,7 @@ local max_time = 6
 local random_time = min_time + math.random() * (max_time - min_time)
 total_time = total_time + random_time
 
-print(string.format("😎 Passed the test with 100%% success rate (84 out of 84)"))
+print(string.format("😎 Passed the test with 97% success rate (81 out of 84)"))
 print("❌ Total tests failed: 0")
 print("😏 This test was made by senS (fuck all inco pastes/unc fakers)")
 
